@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h1> Signup</h1>
+<form action = "/welcome" method='post'>
+  <label>Username
+    <input type = 'text' name='username' required />
+  </label>
+  <br>    
+  <label>Password
+    <input type = 'password' name= 'password' required/>
+  </label><br>
+  <label>Confirm Password 
+    <input type = 'password' name = 'confirm' required/>    
+  </label><br>
+  <label>Email (Optional)
+    <input type='text' name = 'email' />
+  </label><br>
+  <input type='submit' value='Submit'/>
+
+
+
+
+</form>
+
+
+
+
+
+
+
+{% endblock %}
