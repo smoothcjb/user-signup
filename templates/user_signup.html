@@ -1,22 +1,46 @@
 {% extends "master.html" %}
 
 {% block content %}
-<h1> Signup</h1>
-<form action = "/welcome" method='post'>
+<h1> Sign Up </h1>
+<form action = "/signup" method='post'>
+  <div>
   <label>Username
-    <input type = 'text' name='username' required />
-  </label>
-  <br>    
+    <input id = "username" type = 'text' name='username' value = '{{username}}' required minlength = '3'/>
+  </label><label class = 'error'>{{username_error}}</label>
+  </div>
+  <div>
   <label>Password
-    <input type = 'password' name= 'password' required/>
-  </label><br>
+    <input id = "password" type = 'password' name= 'password' required minlength = '3'/>
+  </label><label class = 'error'>{{password_error}}</label>
+  </div>
+  <div>
   <label>Confirm Password 
-    <input type = 'password' name = 'confirm' required/>    
-  </label><br>
+    <input id = "confirm" type = 'password' name = 'confirm' required minlength = '3'/>   
+  </label><label class = 'error'>{{confirm_error}}</label>
+  </div>
+  <div>
   <label>Email (Optional)
-    <input type='text' name = 'email' />
-  </label><br>
-  <input type='submit' value='Submit'/>
+    <input id = "email" type='text' name = 'email' value = '{{email}}' minlength = '3' value = ''/>
+  </label><label class = 'error'>{{email_error}}</label>
+  </div>
+  <input type='submit' value='Submit Form'/>
+<style>
+  #username{
+            margin: 0 0 3px 56px;
+          }
+  #password{
+    margin: 0 0 3px 60px;
+  } 
+  #confirm{
+    margin: 0 0 3px 1px;
+  }   
+  #email{
+    margin: 0 0 5px 12px;
+  }    
+.error{
+  color: red;
+}
+</style>
 
 
 
